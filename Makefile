@@ -2,7 +2,6 @@
 
 build:
 	cd srcs/poky/ && \
-	bitbake -c cleansstate attester tpm2-tss && \
 	bitbake cvm-image-azure
 
 gen-measurements:
