@@ -1,8 +1,7 @@
 .PHONY: build gen-measurements
 
 build:
-	cd srcs/poky/ && \
-	bitbake cvm-image-azure
+	cd srcs/poky/ && bitbake cvm-image-azure
 
 gen-measurements:
 	mkdir -p measurements
