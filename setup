@@ -34,14 +34,14 @@ bitbake-layers add-layer ../meta-openembedded/meta-networking
 bitbake-layers add-layer ../meta-openembedded/meta-filesystems
 verbose_output "Added the meta-openembedded layers to bblayers.conf"
 
-bitbake-layers add-layer ../meta-virtualization
-verbose_output "Added the meta-virtualization layer to bblayers.conf"
-
 bitbake-layers add-layer ../meta-secure-core/meta-tpm2
 verbose_output "Added the meta-tpm2 layer to bblayers.conf"
 
 bitbake-layers add-layer ../meta-confidential-compute
 verbose_output "Added the meta-confidential-compute layer to bblayers.conf"
+
+bitbake-layers add-layer ../meta-intel-sgx
+verbose_output "Added the meta-intel-sgx layer to bblayers.conf"
 
 bitbake-layers add-layer ../meta-seismic
 verbose_output "Added the meta-seismic layer to bblayers.conf"
@@ -55,8 +55,6 @@ verbose_output "Added the meta-clang layer to bblayers.conf"
 bitbake-layers add-layer ../meta-observability
 verbose_output "Added the meta-observability layer to bblayers.conf"
 
-bitbake-layers add-layer ../meta-custom-podman
-verbose_output "Added the meta-custom-podman layer to bblayers.conf"
 # Return to the original directory
 popd
 verbose_output "Returned to $(pwd)"
