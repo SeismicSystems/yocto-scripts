@@ -69,3 +69,10 @@ for patch in $CURRENT_PATH/srcs/yocto-scripts/patches/patch-*; do
     patch -N $CURRENT_PATH/srcs/poky/build/conf/$filename -i $patch
     verbose_output "Applied patch to $CURRENT_PATH/srcs/poky/build/conf/$filename"
 done
+
+# Apply patch to cvm.conf in meta-confidential-compute layer
+if [ -f $CURRENT_PATH/srcs/yocto-scripts/patches/patch-cvm.conf ]; then
+    verbose_output "Applying patch-cvm.conf to meta-confidential-compute layer"
+    patch -N $CURRENT_PATH/srcs/meta-confidential-compute/conf/distro/cvm.conf -i $CURRENT_PATH/srcs/yocto-scripts/patches/patch-cvm.conf
+    verbose_output "Applied patch to $CURRENT_PATH/srcs/meta-confidential-compute/conf/distro/cvm.conf"
+fi
